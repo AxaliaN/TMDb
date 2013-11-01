@@ -9,7 +9,7 @@
     "homepage": "https://github.com/AxaliaN/TMDb/",
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.2.*",
+        "zendframework/zendframework": "2.2.*"
     },
     "require-dev": {
         "mockery/mockery": "*"
