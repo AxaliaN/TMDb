@@ -1,0 +1,17 @@
+{
+    "name": "axalian/tmdb",
+    "description": "Module for working with the TMDb API,
+    "license": "Creative Commons BY-SA 3.0",
+    "keywords": [
+        "tmdb",
+        "api"
+    ],
+    "homepage": "https://github.com/AxaliaN/TMDb/",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.2.*",
+    },
+    "require-dev": {
+        "mockery/mockery": "*"
+    }
+}
