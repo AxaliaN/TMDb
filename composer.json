@@ -1,6 +1,6 @@
 {
     "name": "axalian/tmdb",
-    "description": "Module for working with the TMDb API,
+    "description": "Module for working with the TMDb API",
     "license": "Creative Commons BY-SA 3.0",
     "keywords": [
         "tmdb",
