@@ -1,5 +1,7 @@
 {
     "name": "axalian/tmdb",
+    "type": "library",
+    "version": "dev-master",
     "description": "Module for working with the TMDb API",
     "license": "Creative Commons BY-SA 3.0",
     "keywords": [
@@ -7,6 +9,14 @@
         "api"
     ],
     "homepage": "https://github.com/AxaliaN/TMDb/",
+    "authors": [
+        {
+            "name": "Michel Maas",
+            "email": "michel@michelmaas.com",
+            "homepage": "http://www.michelmaas.com",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.2.*"
