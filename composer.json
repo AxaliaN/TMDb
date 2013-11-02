@@ -1,5 +1,5 @@
 {
-    "name": "axalian/tmdb",
+    "name": "axalian/axalian-tmdb",
     "type": "library",
     "version": "dev-master",
     "description": "Module for working with the TMDb API",
