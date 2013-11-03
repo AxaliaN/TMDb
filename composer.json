@@ -2,13 +2,13 @@
     "name": "axalian/axalian-tmdb",
     "type": "library",
     "version": "dev-master",
-    "description": "Module for working with the TMDb API",
+    "description": "Module for working with the AxalianTmdb API",
     "license": "Creative Commons BY-SA 3.0",
     "keywords": [
         "tmdb",
         "api"
     ],
-    "homepage": "https://github.com/AxaliaN/TMDb/",
+    "homepage": "https://github.com/AxaliaN/AxalianTmdb/",
     "authors": [
         {
             "name": "Michel Maas",
@@ -19,9 +19,18 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.2.*"
+        "zendframework/zendframework": "2.2.*",
+        "guzzle/guzzle": "3.7.*@dev"
     },
     "require-dev": {
         "mockery/mockery": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "AxalianTmdb": "src/"
+        },
+        "classmap": [
+            "./src/AxalianTmdb"
+        ]
     }
 }

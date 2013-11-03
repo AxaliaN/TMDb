@@ -1,0 +1,7 @@
+<?php
+    return array(
+        'axalian_tmdb' => array(
+            'api_key' => '',
+            'proxy' => ''
+        )
+    );
