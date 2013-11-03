@@ -10,6 +10,7 @@
 
 namespace AxalianTmdb\Options;
 
+use Zend\ServiceManager\Config;
 use Zend\Stdlib\AbstractOptions;
 
 class ModuleOptions extends AbstractOptions
@@ -23,6 +24,16 @@ class ModuleOptions extends AbstractOptions
      * @var string The proxy to use
      */
     protected $proxy;
+
+    /**
+     * @var int The version of the TMDb API to use
+     */
+    protected $apiVersion;
+
+    /**
+     * @var array
+     */
+    protected $hydrators;
 
     /**
      * @return string
@@ -58,5 +69,37 @@ class ModuleOptions extends AbstractOptions
     {
         $this->proxy = $proxy;
     }
+
+    /**
+     * @return int
+     */
+    public function getApiVersion()
+    {
+        return $this->apiVersion;
+    }
+
+    /**
+     * @param int $apiVersion
+     */
+    public function setApiVersion($apiVersion)
+    {
+        $this->apiVersion = $apiVersion;
+    }
+
+    /**
+     * @return array
+     */
+    public function getHydrators()
+    {
+        return $this->hydrators;
+    }
+
+    /**
+     * @param array $hydrators
+     */
+    public function setHydrators($hydrators)
+    {
+        $this->hydrators = new Config($hydrators);
+    }
+
 }
- 

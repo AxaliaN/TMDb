@@ -12,7 +12,7 @@ namespace AxalianTmdb\Entity;
 use AxalianTmdb\Enum\MovieStatus;
 use DateTime;
 
-class Movie
+class Movie extends AbstractEntity
 {
     /**
      * @var bool
@@ -22,7 +22,7 @@ class Movie
     /**
      * @var string
      */
-    protected $backdrop_path;
+    protected $backdropPath;
 
     /**
      * @var int
@@ -143,6 +143,8 @@ class Movie
     public function setVoteCount($voteCount)
     {
         $this->voteCount = $voteCount;
+
+        return $this;
     }
 
     /**
@@ -159,6 +161,8 @@ class Movie
     public function setVoteAverage($voteAverage)
     {
         $this->voteAverage = $voteAverage;
+
+        return $this;
     }
 
     /**
@@ -175,6 +179,8 @@ class Movie
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
     }
 
     /**
@@ -191,6 +197,8 @@ class Movie
     public function setTagline($tagline)
     {
         $this->tagline = $tagline;
+
+        return $this;
     }
 
     /**
@@ -207,6 +215,8 @@ class Movie
     public function setStatus($status)
     {
         $this->status = $status;
+
+        return $this;
     }
 
     /**
@@ -223,6 +233,8 @@ class Movie
     public function setSpokenLanguages($spokenLanguages)
     {
         $this->spokenLanguages = $spokenLanguages;
+
+        return $this;
     }
 
     /**
@@ -239,6 +251,8 @@ class Movie
     public function setRuntime($runtime)
     {
         $this->runtime = $runtime;
+
+        return $this;
     }
 
     /**
@@ -255,10 +269,12 @@ class Movie
     public function setRevenue($revenue)
     {
         $this->revenue = $revenue;
+
+        return $this;
     }
 
     /**
-     * @return \Zend\Stdlib\DateTime
+     * @return DateTime
      */
     public function getReleaseDate()
     {
@@ -266,11 +282,13 @@ class Movie
     }
 
     /**
-     * @param \Zend\Stdlib\DateTime $releaseDate
+     * @param DateTime $releaseDate
      */
     public function setReleaseDate($releaseDate)
     {
         $this->releaseDate = $releaseDate;
+
+        return $this;
     }
 
     /**
@@ -287,6 +305,8 @@ class Movie
     public function setProductionCountries($productionCountries)
     {
         $this->productionCountries = $productionCountries;
+
+        return $this;
     }
 
     /**
@@ -303,6 +323,8 @@ class Movie
     public function setProductionCompanies($productionCompanies)
     {
         $this->productionCompanies = $productionCompanies;
+
+        return $this;
     }
 
     /**
@@ -319,6 +341,8 @@ class Movie
     public function setPosterPath($posterPath)
     {
         $this->posterPath = $posterPath;
+
+        return $this;
     }
 
     /**
@@ -335,6 +359,8 @@ class Movie
     public function setPopularity($popularity)
     {
         $this->popularity = $popularity;
+
+        return $this;
     }
 
     /**
@@ -351,6 +377,8 @@ class Movie
     public function setOverview($overview)
     {
         $this->overview = $overview;
+
+        return $this;
     }
 
     /**
@@ -367,6 +395,8 @@ class Movie
     public function setOriginalTitle($originalTitle)
     {
         $this->originalTitle = $originalTitle;
+
+        return $this;
     }
 
     /**
@@ -383,6 +413,8 @@ class Movie
     public function setImdbId($imdbId)
     {
         $this->imdbId = $imdbId;
+
+        return $this;
     }
 
     /**
@@ -399,6 +431,8 @@ class Movie
     public function setId($id)
     {
         $this->id = $id;
+
+        return $this;
     }
 
     /**
@@ -415,6 +449,8 @@ class Movie
     public function setHomepage($homepage)
     {
         $this->homepage = $homepage;
+
+        return $this;
     }
 
     /**
@@ -427,10 +463,13 @@ class Movie
 
     /**
      * @param \AxalianTmdb\Entity\Genre[] $genres
+     * @return $this
      */
     public function setGenres($genres)
     {
         $this->genres = $genres;
+
+        return $this;
     }
 
     /**
@@ -447,6 +486,8 @@ class Movie
     public function setBudget($budget)
     {
         $this->budget = $budget;
+
+        return $this;
     }
 
     /**
@@ -463,6 +504,8 @@ class Movie
     public function setBelongsToCollection($belongsToCollection)
     {
         $this->belongsToCollection = $belongsToCollection;
+
+        return $this;
     }
 
     /**
@@ -470,14 +513,34 @@ class Movie
      */
     public function getBackdropPath()
     {
-        return $this->backdrop_path;
+        return $this->backdropPath;
     }
 
     /**
-     * @param string $backdrop_path
+     * @param string $backdropPath
+     * @return self
      */
-    public function setBackdropPath($backdrop_path)
+    public function setBackdropPath($backdropPath)
     {
-        $this->backdrop_path = $backdrop_path;
+        $this->backdropPath = $backdropPath;
+
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getAdult()
+    {
+        return $this->adult;
+    }
+
+    /**
+     * @param boolean $adult
+     */
+    public function setAdult($adult)
+    {
+        $this->adult = $adult;
+        return $this;
     }
 }

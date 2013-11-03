@@ -14,7 +14,7 @@ use AxalianTmdb\Entity\Tv\Season;
 use AxalianTmdb\Enum\TvStatus;
 use DateTime;
 
-class Tv
+class Tv extends AbstractEntity
 {
     /**
      * @var string
@@ -180,7 +180,7 @@ class Tv
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getFirstAirDate()
     {
@@ -188,7 +188,7 @@ class Tv
     }
 
     /**
-     * @param \DateTime $firstAirDate
+     * @param DateTime $firstAirDate
      */
     public function setFirstAirDate($firstAirDate)
     {
@@ -276,7 +276,7 @@ class Tv
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getLastAirDate()
     {
@@ -284,7 +284,7 @@ class Tv
     }
 
     /**
-     * @param \DateTime $lastAirDate
+     * @param DateTime $lastAirDate
      */
     public function setLastAirDate($lastAirDate)
     {

@@ -9,7 +9,7 @@
 namespace AxalianTmdb\Entity;
 
 
-class Company
+class Company extends AbstractEntity
 {
     /**
      * @var int

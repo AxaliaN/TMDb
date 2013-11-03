@@ -9,7 +9,7 @@
 namespace AxalianTmdb\Entity;
 
 
-class Genre
+class Genre extends AbstractEntity
 {
     /**
      * @var int

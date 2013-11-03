@@ -26,9 +26,13 @@ class ClientFactory implements FactoryInterface
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         /** @var ModuleOptions $moduleOptions */
-        $moduleOptions = $serviceLocator->get('AxalianTmdb\Options\ModuleOption');
-        $client = new GuzzleClient($moduleOptions->getProxy());
+        $moduleOptions = $serviceLocator->get('AxalianTmdb\Options\ModuleOptions');
+        $client = new GuzzleClient($moduleOptions->getProxy() . '/' . $moduleOptions->getApiVersion());
+        $client->setDefaultOption('headers/Accept', 'application/json');
+        $client->setDefaultOption('query/api_key', $moduleOptions->getApiKey());
 
-        return new Client($client);
+        $hydratorService = $serviceLocator->get('AxalianTmdb\Hydrator\HydratorService');
+
+        return new Client($client, $hydratorService);
     }
 }
