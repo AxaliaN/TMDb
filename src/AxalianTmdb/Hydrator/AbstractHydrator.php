@@ -16,6 +16,18 @@ use Zend\Filter\Word\UnderscoreToCamelCase;
 class AbstractHydrator
 {
     /**
+     * Extract values from an object
+     *
+     * @param  object $object
+     * @return array
+     * @todo Implement extract function
+     */
+    public function extract($object)
+    {
+       return $object;
+    }
+
+    /**
      * Hydrate $object with the provided $data.
      *
      * @param  array $data

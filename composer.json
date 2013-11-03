@@ -30,7 +30,8 @@
             "AxalianTmdb": "src/"
         },
         "classmap": [
-            "./src/AxalianTmdb"
+            "./src/AxalianTmdb",
+            "./Module.php"
         ]
     }
 }

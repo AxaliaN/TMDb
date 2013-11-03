@@ -14,23 +14,6 @@ use \Zend\Stdlib\Hydrator\HydratorInterface as ZendHydratorInterface;
 interface HydratorInterface extends ZendHydratorInterface
 {
     /**
-     * Extract values from an object
-     *
-     * @param  object $object
-     * @return array
-     */
-    public function extract($object);
-
-    /**
-     * Hydrate $object with the provided $data.
-     *
-     * @param  array $data
-     * @param  object $object
-     * @return object
-     */
-    public function hydrate(array $data, $object);
-
-    /**
      * @return AbstractEntity
      */
     public function createObject();

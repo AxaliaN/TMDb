@@ -15,4 +15,11 @@ use Zend\Filter\Word\UnderscoreToCamelCase;
 
 class AbstractEntity
 {
+    /**
+     * @return array
+     */
+    public function getLinkedEntityTypes()
+    {
+        return $this->linkedEntityTypes;
+    }
 }

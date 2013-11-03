@@ -18,18 +18,6 @@ use Zend\Filter\Word\UnderscoreToCamelCase;
 
 class MovieHydrator extends AbstractHydrator implements HydratorInterface
 {
-
-    /**
-     * Extract values from an object
-     *
-     * @param  object $object
-     * @return array
-     */
-    public function extract($object)
-    {
-        // TODO: Implement extract() method.
-    }
-
     /**
      * Hydrate $object with the provided $data.
      *
@@ -42,7 +30,7 @@ class MovieHydrator extends AbstractHydrator implements HydratorInterface
         /** @var Movie $object */
         $this->hydrateFromArray($data, $object);
 
-        $linkedEntityTypes = array('genre', 'company', 'country', 'language');
+        $linkedEntityTypes = $object->getLinkedEntityTypes();
         $this->hydrateLinkedEntities($object, $linkedEntityTypes);
 
         return $object;
@@ -92,61 +80,6 @@ class MovieHydrator extends AbstractHydrator implements HydratorInterface
 
             $object->$setter($entities);
         }
-    }
-
-    /**
-     * @param AbstractEntity $object
-     */
-    protected function hydrateGenresFromObject(AbstractEntity $object)
-    {
-        $genres = array();
-
-        foreach ($object->getGenres() as $genreArray) {
-            $genre = new Genre();
-
-            $this->hydrateFromArray($genreArray, $genre);
-
-            $genres[] = $genre;
-        }
-
-        $object->setGenres($genres);
-    }
-
-    /**
-     * @param AbstractEntity $object
-     */
-    protected function hydrateCompaniesFromObject(AbstractEntity $object)
-    {
-        /** @var Movie $object */
-        $companies = array();
-
-        foreach ($object->getProductionCompanies() as $companyArray) {
-            $company = new Company();
-
-            $this->hydrateFromArray($companyArray, $company);
-
-            $companies[] = $company;
-        }
-
-        $object->setProductionCompanies($companies);
-    }
-    /**
-     * @param AbstractEntity $object
-     */
-    protected function hydrateCountriesFromObject(AbstractEntity $object)
-    {
-        /** @var Movie $object */
-        $countries = array();
-
-        foreach ($object->getProductionCountries() as $countryArray) {
-            $country = new Country();
-
-            $this->hydrateFromArray($countryArray, $country);
-
-            $countries[] = $country;
-        }
-
-        $object->setProductionCountries($countries);
     }
 
     /**

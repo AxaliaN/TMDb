@@ -15,6 +15,11 @@ use DateTime;
 class Movie extends AbstractEntity
 {
     /**
+     * @var array
+     */
+    protected $linkedEntityTypes = array('genre', 'company', 'country', 'language');
+
+    /**
      * @var bool
      */
     protected $adult;
@@ -139,6 +144,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param int $voteCount
+     * @return $this
      */
     public function setVoteCount($voteCount)
     {
@@ -157,6 +163,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param float $voteAverage
+     * @return $this
      */
     public function setVoteAverage($voteAverage)
     {
@@ -175,6 +182,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param string $title
+     * @return $this
      */
     public function setTitle($title)
     {
@@ -193,6 +201,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param string $tagline
+     * @return $this
      */
     public function setTagline($tagline)
     {
@@ -211,6 +220,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param \AxalianTmdb\Enum\MovieStatus $status
+     * @return $this
      */
     public function setStatus($status)
     {
@@ -229,6 +239,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param array $spokenLanguages
+     * @return $this
      */
     public function setSpokenLanguages($spokenLanguages)
     {
@@ -247,6 +258,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param int $runtime
+     * @return $this
      */
     public function setRuntime($runtime)
     {
@@ -265,6 +277,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param int $revenue
+     * @return $this
      */
     public function setRevenue($revenue)
     {
@@ -283,6 +296,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param DateTime $releaseDate
+     * @return $this
      */
     public function setReleaseDate($releaseDate)
     {
@@ -301,6 +315,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param array $productionCountries
+     * @return $this
      */
     public function setProductionCountries($productionCountries)
     {
@@ -319,6 +334,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param \AxalianTmdb\Entity\Company[] $productionCompanies
+     * @return $this
      */
     public function setProductionCompanies($productionCompanies)
     {
@@ -337,6 +353,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param string $posterPath
+     * @return $this
      */
     public function setPosterPath($posterPath)
     {
@@ -355,6 +372,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param float $popularity
+     * @return $this
      */
     public function setPopularity($popularity)
     {
@@ -373,6 +391,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param string $overview
+     * @return $this
      */
     public function setOverview($overview)
     {
@@ -391,6 +410,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param string $originalTitle
+     * @return $this
      */
     public function setOriginalTitle($originalTitle)
     {
@@ -409,6 +429,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param string $imdbId
+     * @return $this
      */
     public function setImdbId($imdbId)
     {
@@ -427,6 +448,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param int $id
+     * @return $this
      */
     public function setId($id)
     {
@@ -445,6 +467,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param string $homepage
+     * @return $this
      */
     public function setHomepage($homepage)
     {
@@ -482,6 +505,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param int $budget
+     * @return $this
      */
     public function setBudget($budget)
     {
@@ -500,6 +524,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param int $belongsToCollection
+     * @return $this
      */
     public function setBelongsToCollection($belongsToCollection)
     {
@@ -537,6 +562,7 @@ class Movie extends AbstractEntity
 
     /**
      * @param boolean $adult
+     * @return $this
      */
     public function setAdult($adult)
     {
